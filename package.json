@@ -1,0 +1,32 @@
+{
+  "name": "microservice2",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "compile": "tsc",
+    "test": "nyc ava",
+    "watch": "tsc -w",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix src/**/*.ts",
+    "coverage": "nyc ava"
+  },
+  "author": {
+    "name": "Bogdanova Sofia",
+    "email": "bogdanova.sofiaa@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "rimraf": "^5.0.1"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.3.1",
+    "winston": "^3.10.0"
+  }
+}
